@@ -14,6 +14,12 @@
          case '/chocoblast/createUser':
             include './controller/add_utilisateur.php';
             break;
+            case '/chocoblast/connexion':
+            include './controller/connexion_utilisateur.php';
+            break; 
+        case '/chocoblast/deconexion':
+            include './controller/deconexion_utilisateur.php';
+            break;   
         case '/chocoblast/test':
             include './test.php';
             break;
