@@ -19,7 +19,10 @@
             break; 
         case '/chocoblast/deconexion':
             include './controller/deconexion_utilisateur.php';
-            break;   
+            break; 
+        case '/chocoblast/show':
+                include './controller/show_utilisateur.php';
+                break;     
         case '/chocoblast/test':
             include './test.php';
             break;

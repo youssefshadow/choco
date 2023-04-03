@@ -11,7 +11,7 @@ h1{
   
   form {
       max-width: 500px;
-      margin: 0 auto;
+      margin: 50px auto;
       padding: 20px;
       background-color: #f2f2f2;
       border: 1px solid #ccc;
@@ -57,7 +57,8 @@ h1{
       margin-top: 5px;
     }
     nav {
-        background-color: #333;
+      
+        background-color: #00235B;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -73,7 +74,9 @@ h1{
       }
       
       nav a:hover {
-        background-color: #555;
+        background-color: #BAD7E9;
+        border-radius: 5%;
+        color: #00235B;
       }
       
       .userPic {
@@ -85,7 +88,8 @@ h1{
       
 
       .hero {
-        background-image: url('chemin/vers/image-de-fond.jpg');
+        /* background-image: url('./asset/images/croisson.jpeg'); */
+        background-color: #FCFFE7;
         background-size: cover;
         background-position: center;
         height: 100vh;
@@ -106,7 +110,7 @@ h1{
       }
       
       .hero-content p {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         margin-bottom: 2rem;
         color: black;
       }
@@ -114,7 +118,7 @@ h1{
       .btn {
         display: inline-block;
         padding: 1rem 2rem;
-        background-color: #fff;
+        background-color: #E3DFFD;
         color: #333;
         border-radius: 3px;
         text-decoration: none;
@@ -123,19 +127,113 @@ h1{
       }
       
       .btn:hover {
-        background-color: #333;
+        background-color: #0B2447;
         color: #fff;
       }
       
 
       footer {
-        position: relative;
-       margin-bottom: 0;
-        left: 0;
-        background-color: #f2f2f2;
-        padding: 20px;
-        text-align: center;
-        font-size: 14px;
-        color: #666666;
+       background-color: #00235B;
+        color: #fff;
+        padding: 1rem;
       }
       
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .icons a {
+        margin-right: 1rem;
+        color: #fff;
+        font-size: 1.2rem;
+      }
+      
+      .links a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 1rem;
+      }
+      
+      .links a:last-child {
+        margin-right: 0;
+      }
+
+/* affichage de mes utilisateurs */
+
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  border: solid 1px black;
+  margin: auto;
+  
+ 
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #0B2447;
+  color: white;
+  
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+img {
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+}
+.deleteBtn{
+  width: 100%;
+  background-color: #E21818; /* Couleur de fond */
+  color: #ffffff; /* Couleur du texte */
+  border: none; /* Supprime la bordure */
+  padding: 10px 20px; /* Ajoute un espace entre le texte et la bordure */
+  border-radius: 5px; /* Arrondit les coins */
+  cursor: pointer;
+}
+
+/* Style quand le bouton est survolé */
+.delete-btn:hover {
+  background-color: #990000; 
+}
+
+/* Style quand le bouton est cliqué */
+.delete-btn:active {
+  background-color: #660000; 
+}
+.searchBtn{
+  background-color: #007bff; 
+  color: #ffffff; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+.searchAnnul{
+  background-color:  #E21818; 
+  color: #ffffff;
+  border: none; 
+  padding: 10px 20px;
+  border-radius: 5px; 
+  cursor: pointer;
+}
+
+
+      /* Styles pour la version mobile */
+@media screen and (max-width: 600px) {
+  
+}
