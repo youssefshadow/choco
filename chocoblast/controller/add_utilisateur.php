@@ -27,24 +27,18 @@ if(isset($_POST['submit'])){
         // Définir une image par défaut
         $emplacement = './asset/images/default.jpg';
         
-        if(isset($_FILES['image_utilisateur']) && !empty($_FILES['image_utilisateur']['name'])){
-      
+        if(isset($_FILES['image_utilisateur']) && !empty($_FILES['image_utilisateur']['name'])) {
             $name = $_FILES['image_utilisateur']['name'];
             $tmpName = $_FILES['image_utilisateur']['tmp_name'];
             $size = $_FILES['image_utilisateur']['size'];
             $error = $_FILES['image_utilisateur']['error'];
-            
-       
             $emplacement = './asset/images/'.$name;
-            
-         
-            if(move_uploaded_file($tmpName, $emplacement)){
-          
-            } else {
-             
-                $emplacement = './asset/images/defaut.png';
-            }
+            move_uploaded_file($tmpName, $emplacement);
+        } else {
+            $emplacement = './asset/images/defaut.png';
         }
+        
+        
         
        
         $user = new Utilisateur($nom, $prenom, $mail, $password, $emplacement);

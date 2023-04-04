@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Montserrat:wght@300;400;700&family=Poppins:wght@200;300;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Montserrat:wght@300;400;700&family=Orbitron&family=Poppins:wght@200;300;500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -50,6 +53,8 @@ h1{
       margin-bottom: 5px;
       font-weight: bold;
     }
+
+    
     
     .error {
       color: red;
@@ -57,7 +62,8 @@ h1{
       margin-top: 5px;
     }
     nav {
-      
+        width: 100%;
+        /* position: fixed; */
         background-color: #00235B;
         display: flex;
         justify-content: space-between;
@@ -65,18 +71,23 @@ h1{
         height: 60px;
         padding: 0 20px;
         color: #fff;
+     
       }
       
       nav a {
         color: #fff;
         text-decoration: none;
         padding: 10px 15px;
+        font-family: 'Orbitron', serif;
       }
       
       nav a:hover {
         background-color: #BAD7E9;
         border-radius: 5%;
         color: #00235B;
+      }
+      .logo:hover{
+        background-color: transparent;
       }
       
       .userPic {
@@ -107,28 +118,35 @@ h1{
         font-size: 4rem;
         margin-bottom: 1rem;
         color: black;
+        font-family: 'Montserrat',sans-serif;
+        
+        
+
       }
       
       .hero-content p {
         font-size: 1.8rem;
         margin-bottom: 2rem;
         color: black;
+        font-family: 'Montserrat',sans-serif;
       }
       
       .btn {
         display: inline-block;
         padding: 1rem 2rem;
-        background-color: #E3DFFD;
+        background-color: #D6E4E5;
         color: #333;
         border-radius: 3px;
         text-decoration: none;
         font-weight: bold;
         transition: background-color 0.2s ease-in-out;
+        font-family: 'Orbitron', serif;
       }
       
       .btn:hover {
         background-color: #0B2447;
         color: #fff;
+        transform: scale(1.1);
       }
       
 
@@ -136,6 +154,7 @@ h1{
        background-color: #00235B;
         color: #fff;
         padding: 1rem;
+        font-family: 'Montserrat',sans-serif;
       }
       
       .container {
@@ -230,6 +249,15 @@ img {
   padding: 10px 20px;
   border-radius: 5px; 
   cursor: pointer;
+}
+.icon:hover{
+  animation: spin 2s linear infinite;
+}
+/********* Animations ******/
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 

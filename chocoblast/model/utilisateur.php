@@ -9,11 +9,12 @@ class Utilisateur {
     private $statut = false;
     private $role = 1;
 
-    public function __construct($nom, $prenom, $mail, $password) {
+    public function __construct($nom, $prenom, $mail, $password,$image) {
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->mail = $mail;
         $this->password = $password;
+        $this->image=$image;
     }
 
     // les fameux  Getters  
@@ -108,14 +109,16 @@ public function getUserByMail(PDO $pdo) {
             $prenom = $this->getPrenom();
             $mail = $this->getMail();
             $password = $this->getPassword();
-            $img = $this->getImage();
+            $image = $this->getImage();
+            $this->setImageData($image); 
+            $image = $this->getImage(); 
             $statut = $this->getStatut();
             $req = $bdd->prepare("INSERT INTO utilisateur(nom_utilisateur, prenom_utilisateur, mail_utilisateur, password_utilisateur, image_utilisateur, statut_utilisateur) VALUES(?, ?, ?, ?, ?, ?)");
             $req->bindParam(1, $nom, PDO::PARAM_STR);
             $req->bindParam(2, $prenom, PDO::PARAM_STR);
             $req->bindParam(3, $mail, PDO::PARAM_STR);
             $req->bindParam(4, $password, PDO::PARAM_STR);
-            $req->bindParam(5, $img, PDO::PARAM_STR);
+            $req->bindParam(5, $image, PDO::PARAM_LOB); 
             $req->bindParam(6, $statut, PDO::PARAM_STR);
             $req->execute();
             return true;
