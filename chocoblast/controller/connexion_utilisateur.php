@@ -5,9 +5,9 @@
 
 
     // Vérifie si la session est déjà active avant de la démarrer
-    if (session_status() == PHP_SESSION_NONE) {
-        session_start();
-    }
+    // if (session_status() == PHP_SESSION_NONE) {
+    //     session_start();
+    // }
 
     // Créer un nouvel objet de connexion à la base de données
     $connexion = new Connexion();
@@ -19,7 +19,7 @@
         $password = CleanInput($_POST['password']);
 
         // Récupération de l'utilisateur correspondant au mail
-        $user = new Utilisateur('', '', $mail, $password);
+        $user = new Utilisateur('', '', $mail, $password,'');
         $result = $user->getUserByMail($bdd);
 
         if (count($result) == 1) { // Si l'utilisateur est trouvé
@@ -34,8 +34,8 @@
                 $_SESSION['mail'] = $result[0]['mail_utilisateur'];
 
                 // Redirection vers la page d'accueil
-                header('Location: ./home.php');
-                // exit();
+                header('Location: ./home');
+                exit();
             } else {
                 echo '<h1>Mot de passe incorrect.</h1>';
                 //version sécurisé:

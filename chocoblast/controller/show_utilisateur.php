@@ -36,7 +36,7 @@ if (isset($_POST['search'])) {
 
 // création d'un tableau d'objets Utilisateur à partir des résultats
 foreach ($result as $row) {
-    $user = new Utilisateur($row['nom_utilisateur'], $row['prenom_utilisateur'], $row['mail_utilisateur'], $row['password_utilisateur']);
+    $user = new Utilisateur($row['nom_utilisateur'], $row['prenom_utilisateur'], $row['mail_utilisateur'], $row['password_utilisateur'],$row['image_utilisateur']);
     $user->setImage($row['image_utilisateur']);
     $user->setStatut($row['statut_utilisateur']);
     $user->setId($row['id_utilisateur']);

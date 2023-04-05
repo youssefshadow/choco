@@ -11,11 +11,12 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f6f6f6;
+            background-color: #FCFFE7;
         }
         .container {
             width: 80%;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 3% auto;
             text-align: center;
             padding: 50px;
             background-color: #fff;
@@ -57,6 +58,7 @@
 <body>
     <div class="container">
         <h1>Oops, une erreur est survenue !</h1>
+      
         <p>Nous sommes désolés, mais la page que vous cherchez n'a pas pu être trouvée </p>
         <img src="https://img.icons8.com/external-others-iconmarket/64/null/external-cogwheels-user-experience-others-iconmarket-3.png" id="icon">
 

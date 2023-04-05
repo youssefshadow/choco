@@ -6,8 +6,8 @@ class Utilisateur {
     private $mail;
     private $password;
     private $image;
-    private $statut = false;
-    private $role = 1;
+    private $statut = true;
+    private $role = true;
 
     public function __construct($nom, $prenom, $mail, $password,$image) {
         $this->nom = $nom;
@@ -15,6 +15,7 @@ class Utilisateur {
         $this->mail = $mail;
         $this->password = $password;
         $this->image=$image;
+       
     }
 
     // les fameux  Getters  

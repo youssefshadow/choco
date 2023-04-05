@@ -105,9 +105,7 @@ if (isset($_POST['search'])) {
         $managerUtilisateur = new ManagerUtilisateur();
         $managerUtilisateur->deleteById($id);
 
-        // redirection vers la page de liste des utilisateurs
-        // header('Location: ./view/view_list_user.php');
-        // exit();
+      
     }
     ?>
 </main>
